@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Xpress-Encuesta": {
+    "Encuesta-Servicio-La-Huerta": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Xpress-Encuesta",
+            "outputPath": "dist/Encuesta-Servicio-La-Huerta",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Xpress-Encuesta:build"
+            "browserTarget": "Encuesta-Servicio-La-Huerta:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Xpress-Encuesta:build:production"
+              "browserTarget": "Encuesta-Servicio-La-Huerta:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Xpress-Encuesta:build"
+            "browserTarget": "Encuesta-Servicio-La-Huerta:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "Xpress-Encuesta-e2e": {
+    "Encuesta-Servicio-La-Huerta-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Xpress-Encuesta:serve"
+            "devServerTarget": "Encuesta-Servicio-La-Huerta:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Xpress-Encuesta:serve:production"
+              "devServerTarget": "Encuesta-Servicio-La-Huerta:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "Xpress-Encuesta"
+  "defaultProject": "Encuesta-Servicio-La-Huerta"
 }

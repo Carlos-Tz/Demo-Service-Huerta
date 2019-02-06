@@ -2,18 +2,19 @@
     --margin-first-page: 2em;
     --margin-last-page: 2em;
     --page-width: 21.59cm;
-    --page-height: 33.02cm;
+    --page-height: 27.94cm;
     --page-color: #FFFFFF;
     --page-inner-width: calc(100% - 7mm - 7mm);
     --page-inner-height: calc(100% - 1cm - 1cm);
     --page-inner-margin: 7mm;
     --page-inner-top: 1cm;
     --font: 'Open Sans', sans-serif;
-    --font-size: 1em;
+    --font-size: 0.9em;
     --background: #fafafa;
     --text-color: #303030;
     --logo-width: 7.5cm;
     --input-text-color: #3a3a3c;
+    --border-color: #3a5f8c;
   }
   *,
   *::after,
@@ -37,6 +38,7 @@
   #m-title{
     color: var(--text-color);
     font-weight: 700;
-    font-size: 1.4em;
-    margin-top: 0.8cm;
+    font-size: 1.1em;
+    margin-top: 5mm;
+    /*margin-top: 0.8cm;*/
   }

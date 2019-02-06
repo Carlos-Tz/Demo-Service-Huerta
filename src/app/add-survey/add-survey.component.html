@@ -1,619 +1,321 @@
 <div class="app">
-  <section>
-      <div class="page">
-          <div class="inner">
-              <div class="row">
-                  <form [formGroup]="surveyForm" (ngSubmit)="submitSurveyData()" novalidate>
-                      <div class="row col s9" id="head">
-                          <div id="m-title">ENCUESTA DE SALIDA SERVICE XPRESS VOLKSWAGEN</div>
-                      </div>
-                      <div class="row col s3" id="head">
-                          <img src="assets/Experiencia de 10.png" alt="" width="100%">
-                      </div>
-                      <div class="row col s12" id="r_row">
-                          Nombre del Cliente:
-                          <div class="input-field inline" id="row_input">
-                              <label></label>
-                              <input type="text" formControlName="name" class="form-control" id="i_name" required>
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_row">
-                          Orden de Servicio:
-                          <div class="input-field inline" id="row_input">
-                              <label></label>
-                              <input type="text" formControlName="order" class="form-control" id="i_order" required>
-                          </div>
-                          Fecha:
-                          <div class="input-field inline" id="row_input">
-                              <label></label>
-                              <input type="date" formControlName="date" class="form-control center-align" id="i_date" required>
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_q1">
-                          <p>1.- Usando la escala de 1 a 10 califique los siguientes aspectos:</p>
-                      </div>                    
-                      
+    <form [formGroup]="surveyForm" (ngSubmit)="submitSurveyData()" novalidate>
+        <section>
+            <div class="page">
+                <div class="inner">
+                    <div class="cont">
+                        <div class="row col s12" id="headert">
+                            <div class="row col s8" id="head">
+                                <div id="m-title">Encuesta de Satisfacción del Cliente (Servicio)</div>
+                            </div>
+                            <div class="row col s4" id="head">
+                                <img src="assets/Logo1.png" alt="" width="100%">
+                            </div>
+                        </div>
 
-                      <p id="sub_t">Atención de su Asesor Service Xpress</p>
-                      <div class="row" id="r_row_1b">
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <p id="sub_t">Seguimiento y comunicación del Asesor Service Xpress a lo largo de la reparación
-                          del vehículo</p>
-                      <div class="row" id="r_row_1b">
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1b" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <p id="sub_t">Tiempo que Ud. y/o su vehículo estuvieron en la Concesionaria</p>
-                      <div class="row" id="r_row_1b">
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col">
-                              <a class="btn white" id="r_col">
-                                  <label>
-                                      <input type="radio" formControlName="group1c" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <div class="row" id="r_row">
-                          <p id="sub_t">Comentarios adicionales:</p>
-                          <div class="input-field inline" id="row_input">
-                              <input type="text" formControlName="group1d" class="form-control" id="i_comm">
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_q1">
-                          <p>2.- ¿Cuál es su nivel de satisfacción con las instalaciones, comodidad, limpieza y amenidades ofrecidas por la concesionaria?</p>
-                      </div>
-                      
-                      <div class="row" id="r_row_1c">
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group2" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_q1">
-                          <p>3.- Califique su experiencia del servicio en general recibido en Service Xpress</p>
-                      </div>
-                      <div class="row" id="r_row_1c">
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group3" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <div class="row" id="r_row">
-                          <p id="sub_t">Si calificó con 8 o menos, qué se pudo haber hecho mejor para lograr una calificación de 10</p>
-                          
-                          
-                          <div class="input-field inline" id="row_input">
-                              <input type="text" formControlName="group3b" class="form-control" id="i_comm">
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_q1">
-                      <p>4.- Usando la escala de 1 a 10 ¿Qué tan probable es que recomiende Service Xpress de esta
-                          concesionaria a un familiar o amigo?</p>
-                      </div>
-                      <div class="row" id="r_row_1c">
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="1">
-                                      <span>1</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="2">
-                                      <span>2</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="3">
-                                      <span>3</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="4">
-                                      <span>4</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="5">
-                                      <span>5</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="6">
-                                      <span>6</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="7">
-                                      <span>7</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="8">
-                                      <span>8</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="9">
-                                      <span>9</span>
-                                  </label>
-                              </a>
-                          </div>
-                          <div class="row col s1" id="r_col_2">
-                              <a class="btn white" id="r_col_2b">
-                                  <label>
-                                      <input type="radio" formControlName="group4" class="form-control" value="10">
-                                      <span>10</span>
-                                  </label>
-                              </a>
-                          </div>
-                      </div>
-                      <div class="row col s12" id="r_q1">
-                      <p>5.- Conoció Service Xpress a travéz de algún medio publicitario.</p>
-                      </div>
-                      <div class="row" id="r_row_b">
-                          <div class="row col s2"  id="radio_b">
-                              <label>
-                                  <input type="radio" formControlName="group5" class="form-control" value="Radio">
-                                  <span>Radio</span>
-                              </label>
-                          </div>
-                          <div class="row col s2" id="radio_b">
-                              <label>
-                                  <input type="radio" formControlName="group5" class="form-control" value="Facebook" />
-                                  <span>Facebook</span>
-                              </label>
-                          </div>
-                          <div class="row col s2" id="radio_b">
-                              <label>
-                                  <input type="radio" formControlName="group5" class="form-control" value="Web" />
-                                  <span>Página Web</span>
-                              </label>
-                          </div>
-                          <div class="row col s2" id="radio_b">
-                              <label>
-                                  <input type="radio" formControlName="group5" class="form-control" value="email" />
-                                  <span>Email</span>
-                              </label>
-                          </div>
-                         
-                          <div class="row col s2" id="radio_b">
-                              <label>
-                                  <input type="radio" formControlName="group5" class="form-control" value="ninguno" />
-                                  <span>Ninguno</span>
-                              </label>
-                          </div>
-                          <div class="row col s2" id="radio_b">
-                            <label>
-                                <input type="radio" formControlName="group5" class="form-control" value="otro" />
-                                <span>Otro</span>
+                        <div class="row col s12" id="r_row">
+                            Nombre:
+                            <div class="input-field inline" id="row_input">
+                                <label></label>
+                                <input type="text" formControlName="name" class="form-control" id="i_name" required>
+                            </div>
+                        </div>
+                        <div class="row col s12" id="r_row">
+                            Fecha:
+                            <div class="input-field inline" id="row_input">
+                                <label></label>
+                                <input type="date" formControlName="date" class="form-control center-align" id="i_date"
+                                    required>
+                            </div>
+                            No. de Orden:
+                            <div class="input-field inline" id="row_input">
+                                <label></label>
+                                <input type="number" formControlName="order" class="form-control" id="i_order" required>
+                            </div>
+                            Asesor:
+                            <div class="input-field inline" id="row_input">
+                                <label></label>
+                                <input type="text" formControlName="adviser" class="form-control center-align" id="i_order"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>Favor de marcar la respuesta que mejor describa su nivel de satisfacción con base a su
+                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.</p>
+                        </div>
+
+                        <div class="row col s12" id="r_q1">
+                            <p>1.- Clasifique su experiencia de servicio en general que recibió en esta concesionaria.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group1" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
                             </label>
                         </div>
-                      </div>
-                      <div class="row" id="r_row_b">
-                          <div class="row col s3" id="r_row">
-                              <img src="assets/Logo service express.png" alt="" width="100%">
-                          </div>
-                          <div class="row col s3" id="r_row_b">
-                              <img src="assets/Logo1.png" alt="" width="100%">
-                          </div>
-                          <div class="row col s3 right-align" id="r_row_b">
-                              <button type="submit" class="btn btn-success btn-large" [disabled]="!surveyForm.valid">Enviar</button>
-                          </div>
-                          <div class="row col s3 center-align" id="r_row_b">
-                              <img src="assets/Logo3.png" alt="" height="50px">
-                          </div>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </section>
+                        <div class="row col s12" id="r_q1">
+                            <p>2.- ¿Qué tan satisfecho está con su Asesor de Servicio?</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group2" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q2">
+                            <div class="row col s8" id="r_q2">
+                                <p>3.- ¿Se completo todo el trabajo solicitado en esta visita?</p>
+                            </div>
+                            <div class="row col s4" id="r_q4">
+                                <label *ngFor="let val of ['SI','NO']" id="_radio">
+                                    <input type="radio" formControlName="group3" class="form-control" value="{{val}}">
+                                    <span id="_yes_no">{{val}}</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row col s12" id="r_q3">
+                            ¿Por qué razón? :
+                            <div class="input-field inline" id="row_input_q">
+                                <input type="text" formControlName="group3b" class="form-control" id="i_comm">
+                            </div>
+                        </div>
+
+
+                        <div class="row col s12" id="r_q1">
+                            <p>4.- ¿Que tan satisfecho está con el tiempo transcurrido para que el servicio fuera
+                                completado?</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group4" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>5.- ¿Cuál es su nivel de satisfacción con las instalaciones de la concesionaria y
+                                amenidades ofrecidas?</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group5" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>6.- ¿Qué probabilidad hay de que su próxima reparación o servicio sea en esta misma
+                                concesionaria?</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group6" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>¿Qué podría hacer la concesionaria para mejorar? Comentarios y/o sugerencias:</p>
+                        </div>
+                        <div class="row col s12">
+                            <textarea id="text_a" formControlName="group7" rows="5"></textarea>
+                        </div>
+                        <div class="row col s12" id="_footer">
+                            <div class="row col s9" id="_msg_foot">
+                                <p>Gracias por su tiempo, su opinión es lo más importante</p>
+                            </div>
+                            <div class="row col s3">
+                                <p>Firma del cliente</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Page 2-->
+        <section>
+            <div class="page">
+                <div class="inner">
+                    <div class="cont">
+                        <div class="row col s12" id="headert">
+                            <div class="row col s12" id="head">
+                                <div id="m-title">Encuesta de Satisfacción del Cliente (Servicio) Parte 2</div>
+                            </div>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>Favor de marcar la respuesta que mejor describa su nivel de satisfacción con base a su
+                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.</p>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>Por favor califique los siguientes aspectos:</p>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2a.- La cortesía, responsabilidad y honestidad por parte de nuestros asesores de
+                                servicios.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group8" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2b.- Revisión de los componentes del vehículo (por ej. Gomas de los limpiaparabrisas,
+                                pastillas de freno, etc.) y explicación de los trabajos.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group9" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2c.- Mantenerlo informado del avance del trabajo o servicio.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group10" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2d.- La condición del vehículo en la entrega (por ej. Limpio, sin daños, controles y
+                                posiciones sin cambios.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group11" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2e.- La explicación de los trabajos realizados.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group12" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>2f.- Explicación de la factura y lo justo del cobro.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group13" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>3a.- ¿Por qué motivo?.</p>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>a. Disponibilidad de refacciones.</p>
+                            <p>b. No se pudo encontrar el problema.</p>
+                            <p>c. Se volvió a presentar la falla.</p>
+                            <p>d. No se realizaron todos los trabajos o se realizaron parcialmente.</p>
+                            <p>e. El taller negó que hubiera un problema / afirmó que era normal.</p>
+                            <p>f. El taller estaba demasiado ocupado para terminar todo el trabajo.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of ['a','b','c','d','e','f']" id="_radio">
+                                <input type="radio" formControlName="group14" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>4a.- Facilidad y disponibilidad para agendar cita.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group15" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Page 3-->
+        <section>
+            <div class="page">
+                <div class="inner">
+                    <div class="cont">
+                        <div class="row col s12" id="r_q1">
+                            <p>4b.- Tiempo en la entrega de su vehículo.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group16" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>4c.- Tiempo total requerido para completar el servicio en su vehículo.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group17" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>5a.- Facilidad para entrar y salir.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group18" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>5b.- Limpieza de la Concesionaria.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group19" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>5c.- Comodida en el área de espera.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group20" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>5d.- Amenidades ofrecidas (bebidad, wifi, snacks, revistas, etc.).</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group21" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            <p>6a.- ¿Con la calidad del auto?.</p>
+                        </div>
+                        <div class="row col s12" id="selec_b">
+                            <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
+                                <input type="radio" formControlName="group22" class="form-control" value="{{val}}">
+                                <span>{{val}}</span>
+                            </label>
+                        </div>
+                        <div class="row col s12" id="r_q1">
+                            ¿Por qué? :
+                        </div>
+                        <div class="row col s12">
+                            <textarea id="text_b" formControlName="group23" rows="5"></textarea>
+                        </div>
+                        <div class="row col s12 right-align" id="_b_sub">
+                            <button type="submit" class="btn btn-success btn-large" [disabled]="!surveyForm.valid">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
 </div>
