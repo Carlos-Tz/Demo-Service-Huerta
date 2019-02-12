@@ -12,7 +12,7 @@ import { SurveyService } from '../shared/survey.service';
 })
 export class AddSurveyComponent implements OnInit {
   public surveyForm: FormGroup;
-
+  _show : boolean = false;
   constructor(
     public toastr: ToastrService,
     public surveyApi: SurveyService,
@@ -22,6 +22,7 @@ export class AddSurveyComponent implements OnInit {
   ngOnInit() {
     this.surveyApi.GetSurveysList();
     this.sForm();
+    this.onChanges();
   }
 
   sForm() {
@@ -38,27 +39,28 @@ export class AddSurveyComponent implements OnInit {
       group5: ['', [Validators.required]],
       group6: ['', [Validators.required]],
       group7: [''],
-      group8: ['', [Validators.required]],
-      group9: ['', [Validators.required]],
-      group10: ['', [Validators.required]],
-      group11: ['', [Validators.required]],
-      group12: ['', [Validators.required]],
-      group13: ['', [Validators.required]],
-      group14: ['', [Validators.required]],
-      group15: ['', [Validators.required]],
-      group16: ['', [Validators.required]],
-      group17: ['', [Validators.required]],
-      group18: ['', [Validators.required]],
-      group19: ['', [Validators.required]],
-      group20: ['', [Validators.required]],
-      group21: ['', [Validators.required]],
-      group22: ['', [Validators.required]],
+      group8: [''],
+      group9: [''],
+      group10: [''],
+      group11: [''],
+      group12: [''],
+      group13: [''],
+      group14: [''],
+      group15: [''],
+      group16: [''],
+      group17: [''],
+      group18: [''],
+      group19: [''],
+      group20: [''],
+      group21: [''],
+      group22: [''],
       group23: ['']
     });
   }
 
   ResetForm() {
     this.surveyForm.reset();
+    this._show = false;
   }
 
   submitSurveyData() {
@@ -67,4 +69,49 @@ export class AddSurveyComponent implements OnInit {
     this.ResetForm();
   }
 
+  onChanges(){
+    this.surveyForm.get('group1').valueChanges
+    .subscribe(selected => {
+      if((selected === '9' || selected === '10') ){
+      }else{
+        this._show = true;
+      }
+    });
+    this.surveyForm.get('group2').valueChanges
+    .subscribe(selected => {
+      if((selected === '9' || selected === '10')){
+      }else{
+        this._show = true;
+      }
+    });
+    this.surveyForm.get('group3').valueChanges
+    .subscribe(selected => {
+      if(selected === 'SI'){
+      }else{
+        this._show = true;
+      }
+    });
+    this.surveyForm.get('group4').valueChanges
+    .subscribe(selected => {
+      if((selected === '9' || selected === '10')){
+      }else{
+        this._show = true;
+      }
+    });
+    this.surveyForm.get('group5').valueChanges
+    .subscribe(selected => {
+      if((selected === '9' || selected === '10') ){
+      }else{
+        this._show = true;
+      }
+    });
+    this.surveyForm.get('group6').valueChanges
+    .subscribe(selected => {
+      if((selected === '9' || selected === '10')){
+      }else{
+        this._show = true;
+      }
+    });
+    
+  }
 }

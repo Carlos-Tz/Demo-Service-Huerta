@@ -84,7 +84,8 @@
       height: 2cm;
       margin-top: 3mm;
     }
-    #_footer{ margin-top: 13mm; }
-    #_msg_foot{ font-size: 0.8em; }
+    #_sign_foot{ margin-top: 9mm; }
+    #_button_f{ padding-top: 0; }
+    #_msg_foot{ font-size: 0.8em; margin-top: 9mm; }
     #_radio{ margin-right: 5mm; }
     #_b_sub{ margin-top: 5.5cm; }

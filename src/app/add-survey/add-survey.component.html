@@ -35,17 +35,18 @@
                             Asesor:
                             <div class="input-field inline" id="row_input">
                                 <label></label>
-                                <input type="text" formControlName="adviser" class="form-control" id="i_order"
-                                    required>
+                                <input type="text" formControlName="adviser" class="form-control" id="i_order" required>
                             </div>
                         </div>
                         <div class="row col s12" id="r_q1">
                             <p>Favor de marcar la respuesta que mejor describa su nivel de satisfacción con base a su
-                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.</p>
+                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.
+                            </p>
                         </div>
 
                         <div class="row col s12" id="r_q1">
-                            <p>1.- Clasifique su experiencia de servicio en general que recibió en esta concesionaria.</p>
+                            <p>1.- Clasifique su experiencia de servicio en general que recibió en esta concesionaria.
+                            </p>
                         </div>
                         <div class="row col s12" id="selec_b">
                             <label *ngFor="let val of [1,2,3,4,5,6,7,8,9,10]" id="_radio">
@@ -118,12 +119,17 @@
                         <div class="row col s12">
                             <textarea id="text_a" formControlName="group7" rows="5"></textarea>
                         </div>
-                        <div class="row col s12" id="_footer">
-                            <div class="row col s9" id="_msg_foot">
+                        <div class="row col s12">
+                            <div class="row col s6" id="_msg_foot">
                                 <p>Gracias por su tiempo, su opinión es lo más importante</p>
                             </div>
-                            <div class="row col s3">
+                            
+                            <div class="row col s4 center-align" id="_sign_foot">
                                 <p>Firma del cliente</p>
+                            </div>
+                            <div *ngIf="!_show" class="row col s2 right-align">
+                                <button type="submit" id="_button_f" class="btn btn-success btn-large"
+                                    [disabled]="!surveyForm.valid">Enviar</button>
                             </div>
                         </div>
 
@@ -133,7 +139,7 @@
             </div>
         </section>
         <!--Page 2-->
-        <section>
+        <section *ngIf="_show">
             <div class="page">
                 <div class="inner">
                     <div class="cont">
@@ -144,7 +150,8 @@
                         </div>
                         <div class="row col s12" id="r_q1">
                             <p>Favor de marcar la respuesta que mejor describa su nivel de satisfacción con base a su
-                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.</p>
+                                última visita, en la escala del 1 al 10, considerando 10 como la calificación más alta.
+                            </p>
                         </div>
                         <div class="row col s12" id="r_q1">
                             <p>Por favor califique los siguientes aspectos:</p>
@@ -237,7 +244,7 @@
             </div>
         </section>
         <!--Page 3-->
-        <section>
+        <section *ngIf="_show">
             <div class="page">
                 <div class="inner">
                     <div class="cont">
@@ -311,7 +318,8 @@
                             <textarea id="text_b" formControlName="group23" rows="5"></textarea>
                         </div>
                         <div class="row col s12 right-align" id="_b_sub">
-                            <button type="submit" class="btn btn-success btn-large" [disabled]="!surveyForm.valid">Enviar</button>
+                            <button type="submit" class="btn btn-success btn-large"
+                                [disabled]="!surveyForm.valid">Enviar</button>
                         </div>
                     </div>
                 </div>
